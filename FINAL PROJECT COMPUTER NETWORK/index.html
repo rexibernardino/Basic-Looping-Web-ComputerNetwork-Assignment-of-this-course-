@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #myHeader{
+                background-color: aquamarine;
+                color:black;
+            }
+            body{
+                background-color: aquamarine;
+            }
+            h2{
+                color: black;
+                padding: 10px;
+                background-color: white;
+                font-family: sans-serif;
+                font-size:small;
+                text-align: center;
+            }
+            h1 {
+                font-weight: 400;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 1.125rem;
+            }
+
+            h1,
+            p {
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+            }
+            form {
+                background-color: white;
+                padding: 2.5rem 0.625rem;
+                border-radius: 0.25rem;
+            }
+            .form-group{
+                margin: 0 auto 1.25rem auto;
+                padding: 0.25rem;
+            }
+            .form-control{
+                display:block;
+                width: 100%;
+                height: 2.3rem;
+                padding:0.375rem 0.1rem;
+                background-color:#fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.15rem;
+                transition:border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+            }
+            .form-control:focus {
+                border-color: #80bdff;
+                 outline: 0;
+                 box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+
+            input,button,select,textarea{
+                margin: 0;
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+            .input-radio,.input-checkbox{
+                display: inline-block;
+                margin-right: 0.625rem;
+                min-height: 1.25rem;
+                min-width: 1.25rem;
+            }
+            .input-textarea{
+                min-height: 120px;
+                width: 100%;
+                padding: 0.375rem 0rem;
+                resize: vertical;
+                border-radius: 0.50rem;
+            }
+            button{
+                border: none;
+            }
+            .text-center{
+                text-align: center;
+            }
+            .container{
+                width: 100%;
+                margin: 3.125rem auto 0 auto;
+            }
+            .submit-button{
+                display: block;
+                width: 100%;
+                padding: 0.75rem;
+                background:green;
+                color: inherit;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">Form Registrasi Squad BarbareeeeGaming</h1>
+        <p id="description" class="description text-center">Survey Form Highest Rank dan Role di ML</p>
+        <img src = "https://cdn.discordapp.com/attachments/1091008328894791710/1103957317659140166/20230505_114401.png"
+        alt = ""
+        width="300"
+        height="200"
+        justify-content: center
+        />
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input 
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input 
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email" required/>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+            <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"/>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Highest Rank<span style="color:orange" class="clue"> (Mythic Only)</span></label>
+            <input
+            type="number"
+            name="age"
+            id="number"
+            min="0"
+            max="9999999"
+            class="form-control"
+            placeholder="Highest Rank Kamu"/>
+        </div>
+
+        <div class="form-group">
+            <p>Apa role utama kamu di Mobile Legends?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+                <option disabled selected value>Pilih role kamu</option>
+                <option value="Exp-Lane">Exp-Lane</option>
+                <option value="Roamer">Roamer</option>
+                <option value="Midlane">Midlane</option>
+                <option value="Jungler">Jungler</option>
+                <option value="Gold-Lane">Gold-Lane</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Apa role cadangan kamu di Mobile Legends?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+                <option disabled selected value>Pilih role kamu</option>
+                <option value="Exp-Lane">Exp-Lane</option>
+                <option value="Roamer">Roamer</option>
+                <option value="Midlane">Midlane</option>
+                <option value="Jungler">Jungler</option>
+                <option value="Gold-Lane">Gold-Lane</option>
+                <option value="Tidak Ada">Tidak Ada</option>
+            </select>
+        </div>
+        <div class="form-group" >
+            <p>Pesan atau kata motivasi agar kamu diterima</p>
+            <textarea name="comment" id="comments" class="input-textarea" placeholder="Ketik disini kidssz"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button" style="color:#ced4da" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Submit</button>
+        </div>
+
+    </form>
+</div>
+
+</html>
